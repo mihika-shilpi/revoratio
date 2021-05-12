@@ -40,22 +40,7 @@ self.__precacheManifest = [
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "cac02764b7532fa6eb57064ff641695e"
-  },
-  {
-    "url": "static/webfonts/s/playfairdisplay/v22/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKdFvXDXbtM.woff2"
-  },
-  {
-    "url": "static/webfonts/s/playfairdisplay/v22/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKd3vXDXbtM.woff2"
-  },
-  {
-    "url": "static/webfonts/s/montserrat/v15/JTURjIg1_i6t8kCHKm45_cJD3gnD_g.woff2"
-  },
-  {
-    "url": "static/webfonts/s/montserrat/v15/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2"
-  },
-  {
-    "url": "static/webfonts/s/montserrat/v15/JTURjIg1_i6t8kCHKm45_ZpC3gnD_g.woff2"
+    "revision": "99d9489bbf9ffe7840c1d4fcd361cfa9"
   },
   {
     "url": "component---cache-caches-gatsby-plugin-offline-app-shell-js-bd66e0875c644eebea41.js"
