@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: "/revoratio",
   siteMetadata: {
     siteTitle: `Revoratio Docs`,
     defaultTitle: `Reoratio Docs`,
