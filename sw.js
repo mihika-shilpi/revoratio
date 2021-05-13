@@ -27,7 +27,7 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-221bea5791d9f463dca1.js"
+    "url": "webpack-runtime-5ee64e7189e0976c8023.js"
   },
   {
     "url": "framework-1f2d33ac07c263e4d3df.js"
@@ -36,11 +36,26 @@ self.__precacheManifest = [
     "url": "bac1b955-4456571ec26905f16636.js"
   },
   {
-    "url": "app-3fc9c1ddc6ae62cf9774.js"
+    "url": "app-11b267abd391289d65f0.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "99d9489bbf9ffe7840c1d4fcd361cfa9"
+    "revision": "baed774693a09475dbe415d6c0e35813"
+  },
+  {
+    "url": "static/webfonts/s/playfairdisplay/v22/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKdFvXDXbtM.woff2"
+  },
+  {
+    "url": "static/webfonts/s/playfairdisplay/v22/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKd3vXDXbtM.woff2"
+  },
+  {
+    "url": "static/webfonts/s/montserrat/v15/JTURjIg1_i6t8kCHKm45_cJD3gnD_g.woff2"
+  },
+  {
+    "url": "static/webfonts/s/montserrat/v15/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2"
+  },
+  {
+    "url": "static/webfonts/s/montserrat/v15/JTURjIg1_i6t8kCHKm45_ZpC3gnD_g.woff2"
   },
   {
     "url": "component---cache-caches-gatsby-plugin-offline-app-shell-js-bd66e0875c644eebea41.js"
@@ -51,14 +66,14 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "4baadc4d13b560e843dd92f8225f787b"
+    "revision": "034436bee04d1a3c3f183326c611fef5"
   },
   {
     "url": "polyfill-e51bbee8c96ca1f53276.js"
   },
   {
     "url": "manifest.webmanifest",
-    "revision": "23f5333c3bfc4e29e68c42825ec66d0a"
+    "revision": "da1a5d7811b5f2bb6a1bde1612e92661"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
@@ -150,7 +165,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/revoratio/app-3fc9c1ddc6ae62cf9774.js`))) {
+  if (!resources || !(await caches.match(`/revoratio/app-11b267abd391289d65f0.js`))) {
     return await fetch(event.request)
   }
 
