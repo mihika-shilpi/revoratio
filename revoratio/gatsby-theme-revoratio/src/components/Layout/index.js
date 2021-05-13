@@ -1,4 +1,3 @@
-/* @jsx jsx */
 import { useState, useRef, Fragment } from 'react';
 import { jsx, css } from '@emotion/react';
 import PropTypes from 'prop-types';
@@ -13,14 +12,16 @@ import { MDXProvider } from "@mdx-js/react" ;
 import * as Icons from 'react-icons/io5' ;
 import { BrandFont } from "../Brand/font";
 import { BrandRule } from "../Brand/rule";
-import { BrandColour } from "../Brand/colour";
+import { BrandColor } from "../Brand/color";
+import { BrandBox } from "../Brand/box";
+import { BrandCaption } from "../Brand/caption";
 import { IconContext } from "react-icons";
 
-import { Grid, Embed, Badge, Text} from "theme-ui";
+import { Grid, Embed, Badge } from "theme-ui";
 
 import { GatsbyImage, StaticImage } from "gatsby-plugin-image";
 
-const shortcodes = { BrandFont, BrandRule, BrandColour, GatsbyImage, Grid, Embed, Badge, Text, Icons }
+const shortcodes = { BrandFont, BrandRule, BrandColor, BrandCaption, BrandBox, GatsbyImage, Grid, Embed, Badge, Icons }
 
 export default function Layout({
   children,
@@ -48,13 +49,13 @@ export default function Layout({
       <Container>
         <Sidebar isMenuOpen={isMenuOpen} />
         <Main>
+        <Header handleMenuOpen={handleMenuOpen} />
         <Featured>
-        {featured && (
-        <GatsbyImage image={featured.childImageSharp.gatsbyImageData} alt={title} style={{height: '300px'}}/>
-        )}
+          {featured && (
+          <GatsbyImage image={featured.childImageSharp.gatsbyImageData} alt={title} style={{height: '300px'}}/>
+          )}
         </Featured>
         <Docs>
-          <Header handleMenuOpen={handleMenuOpen} />
           {title && (
             <h1
               css={css`
@@ -64,7 +65,7 @@ export default function Layout({
                   display: block;
                 }
                 @media (max-width: 780px) {
-                  padding:24px;
+                  padding:24px 0px 0px 24px;
                 }
               `}
             >
@@ -73,13 +74,13 @@ export default function Layout({
           )}
           <Children ref={contentRef}>
             {title && (
-              <h1
-                css={css`
-                  @media (max-width: 1200px) {
-                    display: none;
-                  }
-                `}
-              >
+              <h1 css={css`
+              margin-bottom:40px;
+
+              @media (max-width: 1200px) {
+                display: none;
+              }
+            `}>
                 {title}
               </h1>
             )}
@@ -89,6 +90,7 @@ export default function Layout({
             headings={headings}
             disableTOC={disableTOC}
             contentRef={contentRef}
+            title={title}
           />
           </Docs>
         </Main>

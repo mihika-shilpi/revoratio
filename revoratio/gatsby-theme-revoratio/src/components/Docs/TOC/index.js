@@ -8,12 +8,11 @@ import slug from '../../../util/slug';
 
 import { Wrapper, Container } from './styles';
 
-export default function TableOfContents({ headings, disableTOC, contentRef }) {
+export default function TableOfContents({ headings, title, disableTOC, contentRef }) {
   const { y } = useWindowScroll();
   const theme = useTheme();
   const { width, height } = useWindowSize();
   const [offsets, setOffsets] = useState([]);
-
   const isMobile = width <= 1200;
 
   useEffect(() => {
@@ -59,7 +58,7 @@ export default function TableOfContents({ headings, disableTOC, contentRef }) {
     return (
       <Wrapper>
         <Container>
-          <h2>On this page</h2>
+          <h2>{title}</h2>
           <nav>
             <ul>
               {headings

@@ -1,0 +1,65 @@
+---
+title: Code
+description: Revoratio theme code components.
+featuredImage: ../../../static/Revoratio/cover.png
+---
+
+Most of the code components set up for this theme come from [revoratiodocs](https://revoratiodocs.netlify.app). They support many options for code components.
+
+### Title
+
+To show a title, just add it to your code block. Ex: `title=src/myfile.css`
+
+```css title=src/myfile.css
+.gatsby::before {
+  content: 'nice...';
+}
+```
+
+### Line numbers
+
+To add line numbers for that code block, pass an option `lineNumbers=true`.
+
+```js lineNumbers=true
+const revoratio = {
+  launch: () => console.log('Launching...'),
+};
+
+revoratio.launch();
+```
+
+### React live
+
+This theme uses `react-live`, so you can
+create a playground for live editing React components.
+
+To use it, just add a `live=true` option to your code block.
+
+```jsx lineNumbers=true title=gatsby-config.js live=true
+function MyComponent() {
+  function handleButtonClick() {
+    alert('wowww');
+  }
+
+  return <button onClick={handleButtonClick}>Hey, click me!</button>;
+}
+
+render(<MyComponent />);
+```
+
+### Highlight lines
+
+To highlight lines, you can pass ranges to a `highlight` option.
+For example `highlight={1-4,6-7,9}` on the code below would result in:
+
+```jsx highlight={1-4,6-7,9}
+function MyComponent() {
+  function handleButtonClick() {
+    alert('wowww');
+  }
+
+  return <button onClick={handleButtonClick}>Hey, click me!</button>;
+}
+
+render(<MyComponent />);
+```

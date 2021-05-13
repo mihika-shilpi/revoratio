@@ -1,0 +1,104 @@
+---
+title: Customisation
+description: Revoratio theme setup and configuration.
+featuredImage: ../../../static/Revoratio/cover.png
+---
+
+Using this theme is all about personalising it! Some personalisations require you to shadow the theme. Some just mean creating your own content files. Here are a few key features: 
+
+> To shadow/override this theme, you will need to place your files into the `src/gatsby-theme-revoratio` folder. If you don't know what shadowing is, or have questions about it, [check this tutorial](https://www.gatsbyjs.com/docs/themes/shadowing/) from the Gatsby documentation.
+
+## The Logo
+
+To place your brand logo in the top left, create the following file:
+
+```js title=src/gatsby-theme-revoratio/components/Logo.js
+import React from 'react';
+
+export default function Logo(props) {
+  return (
+    <svg width={180} height={34} viewBox="0 0 180 34" fill="none" {...props}>
+      /// svg content
+    </svg>
+  );
+}
+```
+
+If your logo is a png, you could use it like this:
+
+```js title=src/gatsby-theme-revoratio/components/Logo.js
+import React from 'react';
+
+// Path to the logo file on your project
+import Logo from 'assets/logo.png';
+
+const Logo = () => (
+  <img src={Logo} alt="logo" style={{ width: 180 }} />
+);
+
+export default Logo;
+```
+
+---
+
+## Colour
+
+We use [Emotion](https://emotion.sh/docs/theming) for major theme styles. To change the theme colors, create a file under `src/gatsby-theme-revoratio/styles/theme.js`.
+
+Remember that you need to restart your server to see the update.
+
+```js title=src/gatsby-theme-revoratio/styles/theme.js
+export default {
+  colors: {
+    primary: '#0064FF', // accent colour
+    background: '#FFFFFF', // website background
+    title: `#28282D`, // colour for titles
+    text: `#44464C`, // body copy
+    grey: `#828282`, // light body copy like captions
+    soft: '#e0e0e0', // components like dividers and table lines
+  },
+};
+```
+
+---
+
+## Fonts
+
+We use a handy plugin called `gatsby-plugin-webfonts` which makes it easy for you to import fonts from known web sources into your project for use. Read more about the theme [on its gatsby page](https://www.gatsbyjs.com/plugins/gatsby-plugin-webfonts/).
+
+Add fonts in you `gatsby-config.js` file.
+
+```js title=gatsby-config.js
+{resolve: `gatsby-plugin-webfonts`,
+  options: {
+    fonts: {
+      google: [
+        {
+          family: "Playfair Display",
+          variants: ["300", "400", "500"],
+        },
+      ],
+    },
+  },
+},
+```
+
+These fonts can then be used in the Brand Fonts component to display your brand fonts, or you can replace the entire website's font by shadowing the global styles file:
+
+```js title=src/gatsby-theme-revoratio/styles/global.js
+import React from 'react';
+import { useTheme, Global, css } from '@emotion/react';
+
+export default function GlobalStyle() {
+  const theme = useTheme();
+
+  return (
+    <Global
+      styles={css`
+        body {
+          font-family: 'Inter', sans-serif;
+        }
+      `}
+      />
+  )
+```

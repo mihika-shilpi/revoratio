@@ -1,4 +1,3 @@
-/* @jsx jsx */
 import { css, jsx } from '@emotion/react';
 import PropTypes from 'prop-types';
 

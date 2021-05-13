@@ -22,25 +22,32 @@ export default function GlobalStyle() {
           text-rendering: optimizelegibility;
           -webkit-font-smoothing: antialiased;
           overflow-y: scroll;
+          color: ${theme.colors.text};
+          line-height: 28px;
+          margin-bottom: 16px;
+          font-weight: 400;
         }
 
         h1 {
           font-size: 32px;
           color: ${theme.colors.title};
-          font-weight: bold;
+          font-weight: 400;
           margin-bottom: 24px;
         }
 
         h2 {
           font-size: 24px;
+          font-weight: 600;
         }
 
         h3 {
-          font-size: 18px;
+          font-size: 20px;
+          font-weight:600;
         }
 
         h4 {
           font-size: 16px;
+          font-weight: 600;
         }
 
         h2,
@@ -49,9 +56,7 @@ export default function GlobalStyle() {
         h5,
         h6 {
           color: ${theme.colors.title};
-
           margin: 24px 0 16px 0;
-          font-weight: bold;
         }
 
         p {
@@ -83,8 +88,8 @@ export default function GlobalStyle() {
         }
 
         a {
-          color: ${theme.colors.text};
-          font-weight: bold;
+          color: ${theme.colors.primary};
+          font-weight: 500;
           text-decoration: none;
 
           &:hover {
@@ -93,63 +98,48 @@ export default function GlobalStyle() {
         }
 
         blockquote {
-          margin-bottom: 16px;
+          margin: 32px 24px;
           width: 100%;
-
-          p {
-            padding: 1rem;
-            border-radius: 5px;
-            background: ${theme.colors.components.blockquote.background};
-            color: ${theme.colors.components.blockquote.text};
-            margin: 0;
+          border-left: 2px solid ${theme.colors.primary};
+          stroke-linecap: round;
+          padding-left: 16px;
 
             a {
-              color: ${theme.colors.components.blockquote.text};
+              color: ${theme.colors.primary};
             }
-          }
         }
 
         hr {
           border: 0;
           height: 0;
-          border-top: 1px solid rgba(0, 0, 0, 0.1);
-          border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+          margin:48px 0px;
+          border-top: 1px solid ${theme.colors.soft};
+          border-bottom: none;
         }
 
         table {
-          border-collapse: separate;
-          border-spacing: 0 4px;
-          margin-top: -4px;
-          margin-bottom: 16px;
+          border-collapse: collapse;
+          margin-bottom: 24px;
           width: 100%;
 
           th,
           td {
             margin: 0;
             color: ${theme.colors.text};
-            background-color: ${theme.colors.shape};
-            border: solid 1px ${theme.colors.shape};
-            border-style: solid none;
-            padding: 12px;
+            border-bottom: 1px solid ${theme.colors.soft};
+            padding: 8px 2px;
 
-            :first-of-type {
-              border-left-style: solid;
-              border-top-left-radius: 5px;
-              border-bottom-left-radius: 5px;
-            }
-
-            :last-child {
-              border-right-style: solid;
-              border-bottom-right-radius: 5px;
-              border-top-right-radius: 5px;
-            }
           }
 
           tr {
             th {
               color: ${theme.colors.title};
-              text-align: left;
+              border-bottom: 1px solid ${theme.colors.text};
               font-weight: bold;
+
+              :empty {
+                display:none;
+              }
             }
           }
         }
@@ -162,14 +152,33 @@ export default function GlobalStyle() {
           max-width: 100%;
         }
 
-        ul,
-        ol {
+        .gatsby-resp-image-wrapper {
+          margin:0px 12px;
+        }
+
+        ul{
           color: ${theme.colors.text};
-          padding-left: 15px;
-          margin-bottom: 16px;
+          padding-left: 36px;
 
           li {
-            line-height: 28px;
+            line-height: 32px;
+
+            ::marker {
+              color: ${theme.colors.primary};
+            }
+          }
+        }
+
+       ol {
+          color: ${theme.colors.text};
+          padding-left: 40px;
+
+          li {
+            line-height: 32px;
+
+            ::marker {
+              color: ${theme.colors.grey};
+            }
           }
         }
 

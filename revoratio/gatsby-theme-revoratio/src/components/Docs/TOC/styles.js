@@ -17,13 +17,12 @@ export const Wrapper = styled.div`
   @media (max-width: 1200px) {
     position: relative;
     top: auto;
-    order: 0;
     max-width: 100%;
     margin-left: 0;
     padding-top: 0;
   }
   @media (max-width: 780px) {
-    padding: 0px 24px 24px 24px;
+    padding: 0px 24px 0px 24px;
   }
 `;
 
@@ -47,6 +46,13 @@ export const Container = styled.div`
       margin-bottom: 12px;
       line-height: 1.1;
 
+      @media (max-width: 1200px) {
+        display: inline-block;
+        margin: 0px 24px 8px 0px;
+        margin-left:0px !important;
+        text-transform: uppercase;
+      }
+
       a {
         font-size: 14px;
         font-weight: 400;
@@ -62,7 +68,7 @@ export const Container = styled.div`
   }
 
   @media (max-width: 1200px) {
-    margin: 0 0 24px 0;
+    margin: 0 0 16px 0;
     padding-bottom: 16px;
     border-bottom: 1px solid rgba(120, 117, 122, 0.2);
   }

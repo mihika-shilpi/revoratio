@@ -31,13 +31,8 @@ export const Main = styled.main`
 
 export const Featured = styled.div`
   width: 100%;
-
-  @media (max-width: 1200px) {
+  @media (min-width: 1200px) {
     flex-direction: column;
-  }
-
-  @media (max-width: 780px) {
-    padding-top: 0;
   }
 `;
 
@@ -66,7 +61,7 @@ export const Children = styled.div`
 
   @media (max-width: 1200px) {
     max-width: 100%;
-    padding-right: 0;
+    padding-right: 24px;
     order: 3;
   }
 

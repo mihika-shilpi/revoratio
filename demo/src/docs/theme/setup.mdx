@@ -1,0 +1,109 @@
+---
+title: Setup
+description: Revoratio theme setup and configuration.
+featuredImage: ../../../static/Revoratio/cover.png
+---
+
+Once you've got a gatsby project running with this theme, here are the first few steps to set up
+
+## Config
+
+Once you've started up the theme, edit the `gatsby-config.js` to put in your porject's key information.
+
+#### Theme Options
+
+| Key           | Default | Required | Description                                                                                                                                                            |
+| ------------- | ------- | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| basePath      | /       | No       | Root url for all docs                                                                                                                                                  |
+| configPath    | config  | No       | Location of config files                                                                                                                                               |
+| docsPath      | docs    | No       | The site description for SEO and social (FB, Twitter) tags                                                                                                             |
+| repositoryUrl | -       | No       | The complete URL of your repository (supports GitHub, GitLab and Bitbucket). Example: `https://github/revoratio/gatsby-themes`                                        |
+| baseDir       | -       | No       | If your Gatsby site does not live in the root of your project directory/git repo, pass the subdirectory name here (ex: `docs`)                                         |
+| withMdx       | true    | No       | If necessary, you can add your own MDX options to the theme. To do so, make sure you turn this option to false and include `gatsby-plugin-mdx` on your `gatsby-config` |
+| branch        | main    | No       | Default branch of the repository                                                                                                                                       |
+
+<br />
+
+<BrandCaption> Note: When adding a BitBucket link on the `repositoryUrl` option, don't add the `src` and `branch` to it. Example of correct link: `https://bitbucket.org/jpedroschmitz/gatsby-themes`
+</BrandCaption>
+
+#### Example usage
+
+```js title=gatsby-config.js
+module.exports = {
+  siteMetadata: {
+    siteTitle: `gatsby-theme-revoratio`,
+    defaultTitle: `gatsby-theme-revoratio`,
+    siteTitleShort: `gatsby-theme-revoratio`,
+    siteDescription: `Gatsby Theme to create brand guideline websites easily and quickly`,
+    siteUrl: `https://revoratio.com`,
+    siteAuthor: `Revoratio`,
+    siteImage: `/cover.png`,
+    siteLanguage: `en`,
+    basePath: `/`,
+  },
+  plugins: [
+    {
+      resolve: `gatsby-theme-revoratio`,
+      options: {
+        basePath: `/`,
+        configPath: `src/config`,
+        docsPath: `src/docs`,
+        repositoryUrl: `https://github.com/mihika-shilpi/revoratio`,
+        baseDir: `demo`,
+      },
+    },
+  ],
+};
+```
+---
+
+## The Homepage
+
+Create a file at `src/gatsby-theme-revoratio/text/index.mdx` to edit the text. Example:
+
+```mdx title=src/gatsby-theme-revoratio/text/index.mdx
+# Introduction
+
+My awesome project!
+```
+---
+
+## Navigation
+
+To create the left hand side page sidebar navigation, create and edit a yaml file. 
+Create a `sidebar.yml` file under the `src/gatsby-theme-revoratio/config` folder. 
+Then add your section titles and guide pages into the structure. You can add external links too.
+
+```yaml title=sidebar.yml
+# Just a simple item
+- label: 'Home'
+  link: '/'
+# With a list of items
+- label: 'With subitems'
+  items:
+    - label: 'My Example'
+      link: '/my-example'
+    - label: 'GitHub'
+      link: 'https://github.com/jpedroschmitz'
+```
+
+---
+
+## Guidelines
+
+And now, you're ready to start creating your guidelines! 
+All MDX files created inside your docs folder will become pages, with the path defined by the filename. Inside all docs files, as MDX frontmatteer you can optionally define these items:
+
+
+```mdx
+---
+title: 'My Example' // page title
+description: 'A simple description for this page' // SEO description
+image: /banner.jpeg // SEO image
+featuredImage: /banner.jpeg // Optional header image for the page
+disableTableOfContents: false // Turn of the automatic page TOC on the right
+---
+
+And then all you MDX and components content 
+```

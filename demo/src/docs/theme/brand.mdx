@@ -1,0 +1,191 @@
+---
+title: Brand Components
+description: Revoratio theme custom Brand components.
+featuredImage: ../../../static/Revoratio/cover.png
+
+---
+
+As a theme made for brand guidelines, we've put together some custom components that you will most likely need to to build up brand guidelines< Colours, Fonts and other essentiels!
+Like everything else in the theme, you can shadow the component files to customise them, but we've integrated a lot of styling `props` into the components themselves, so you have plenty to work with. 
+
+
+## Box
+
+A very basic component, the box allows lots of customisation. It takes MDX and component content within it. 
+You can add background colours, your own text styles and colours -- to display your brand content. Not that text styling will only apply to direct children - not components or html within the box. 
+
+<Grid columns={2} gap={2}>
+
+``` 
+<BrandBox> This is a box </BrandBox>
+```
+<BrandBox> This is a box </BrandBox>
+
+</Grid>
+
+| Prop | Control |
+|:---|:---|
+|color| Content/type color|
+|font| Font of the content|
+|fontSize| Content font-size|
+|fontWeight | Content font-weight|
+|case| Content text-transform|
+|Background | Adds a background to the box and padding within it|
+|extraSpace | Set this to true to add larger padding |
+
+<Grid columns={2} gap={2}>
+
+``` 
+<BrandBox
+    color= '#2222ff'
+    font= 'Playfair Display'
+    fontSize= '32px'
+    fontWeight= '400'
+    case= 'lowercase'
+    Background= '#f3f3f3'
+    extraSpace= {true}
+    > This is a box </BrandBox>
+```
+<BrandBox
+    color= '#2222ff'
+    font= 'Playfair Display'
+    fontSize= '32px'
+    fontWeight= '400'
+    case= 'lowercase'
+    Background= '#f3f3f3'
+    extraSpace= {true}
+    > This is a box </BrandBox>
+
+</Grid>
+
+---
+
+## Rule 
+
+As with all guidelines, you will have to mark things as do and don't do. So we have a specific rule component. 
+
+<Grid columns={2} gap={2}>
+
+``` 
+<BrandRule> This is a rule </BrandRule>
+```
+<BrandRule> This is a rule </BrandRule>
+
+</Grid>
+
+| Prop | Control |
+|:---|:---|
+|do| Defaults to true - a 'do' rule. Set to false to get a cross.|
+|Background| Default false, you can switch this to true to highlight your rule|
+|font| Font of the content|
+|fontSize| Content font-size|
+|fontWeight | Content font-weight|
+
+<Grid columns={2} gap={2}>
+
+``` 
+<BrandRule
+    Background= {true}
+    do= {true}
+    > This is a rule </BrandRule>
+```
+
+``` 
+<BrandRule
+    Background= {true}
+    do= {false}
+    > This is a rule </BrandRule>
+```
+
+<BrandRule
+    Background= {true}
+    do= {true}
+    > This is a rule </BrandRule>
+
+<BrandRule
+    Background= {true}
+    do= {false}
+    > This is a rule </BrandRule>
+
+</Grid>
+
+---
+
+## Font
+
+Display your brand fonts with the font component.
+
+
+``` 
+<BrandFont
+    font="Montserrat"
+    fontName="Name of font" />
+```
+<BrandFont
+    font="Montserrat"
+    fontName="Name of font" />
+
+
+| Prop | Control |
+|:---|:---|
+|font| Font of the content|
+|fontName| Optional font label below|
+|light | Set this to true to display the font in grey|
+
+---
+
+## Color
+
+Display color snippets with colour data using this component. It requires that you have HEEX values for your colours. If you need to add a custome row, such as Pantone or other colour codes, you can shodow and edit the component. 
+
+<Grid columns={2} gap={4}>
+
+```
+<BrandColor 
+    colorName = "Revoratio"
+    colorHex = "#0064FF"
+    colorRGB = "0, 100, 255"
+    colorCMYK = "77, 48, 0, 0"
+/>
+```
+
+<BrandColor 
+    colorName = "Revoratio"
+    colorHex = "#0064FF"
+    colorRGB = "0, 100, 255"
+    colorCMYK = "77, 48, 0, 0"
+/>
+</Grid>
+
+| Prop | Control |
+|:---|:---|
+|colorName| The Name you want displayed for your color|
+|colorHex| This HEX value is both displayed and affects the background colour of the card|
+|colorRGB | A string  of RGB values |
+|colorCMYK | A string  of CMYK values |
+|flex | Set this to 'row' to display colour values on the right of the card |
+
+---
+
+## Caption
+
+All guidelines need annotations and captions. This component offers a faded, smaller font sized caption with a limited width, to add explanatory notes to you examples. 
+
+<Grid columns={2} gap={4}>
+
+```
+<BrandCaption> This is caption text </BrandCaption>
+```
+
+<BrandCaption> This is caption text </BrandCaption>
+
+</Grid>
+
+---
+
+## Theme-ui
+
+We've also called in the essentials : `Grid` from theme-ui. 
+You can also use their `Badge` and `Embed` to give you some extra options. 
+
+Read more about this components on [Theme UI Components](https://theme-ui.com/components)

@@ -2,7 +2,19 @@
 
 - label: 'Introduction'
   link: '/'
-- label: Guidelines
+- label: Using Revoratio
+  items:
+    - label: 'Setup'
+      link: '/theme/setup'    
+    - label: 'MDX Styles'
+      link: '/theme/mdx'
+    - label: 'Brand Components'
+      link: '/theme/brand'
+    - label: 'Code'
+      link: '/theme/code'
+    - label: 'Customisation'
+      link: '/theme/custom'  
+- label: Sample
   items:
     - label: 'Identity'
       link: '/guidelines/identity'
