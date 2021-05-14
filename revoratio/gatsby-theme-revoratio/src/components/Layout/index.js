@@ -19,7 +19,7 @@ import { IconContext } from "react-icons";
 
 import { Grid, Embed, Badge } from "theme-ui";
 
-import { GatsbyImage, StaticImage } from "gatsby-plugin-image";
+import { GatsbyImage } from "gatsby-plugin-image";
 
 const shortcodes = { BrandFont, BrandRule, BrandColor, BrandCaption, BrandBox, GatsbyImage, Grid, Embed, Badge, Icons }
 

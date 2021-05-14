@@ -28,3 +28,6 @@ We'd be happy to know if you have any thoughts or suggestions for additions!
 
 🔎 SEOsetup (Sitemap, schema.org data, Open Graph tags).
 
+### Credit 
+
+A thank you to @rocketdocs whose theme is not only the inspiration, but the code base upon which this was built

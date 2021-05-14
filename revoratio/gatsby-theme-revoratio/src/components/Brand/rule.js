@@ -7,10 +7,10 @@ const BrandRule = (props) => {
   return (
     <span style={{ 
       backgroundColor: props.Background ? [ props.do ? '#F6F9F8': '#FFF6F6'] : 'none' , 
-      padding: props.Background ? '15px 10px' : '0px 10px', 
+      padding: props.Background ? '15px 10px' : '0px 8px', 
       width:'100%', 
       display: 'flex', 
-      marginBottom: '15px'}}>
+      margin: '8px 0px'}}>
       <span style={{ marginRight: '15px'}}> 
       { props.do ? <IoCheckmarkCircleOutline color='#00B775' size='25'/> : <IoCloseCircleOutline color='#eb5757' size='25'/> } 
       </span>
