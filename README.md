@@ -1,54 +1,30 @@
-<h1 align="center">
-  <br>
-  <img src="https://storage.googleapis.com/golden-wind/github/gatsby-themes-logo.svg" alt="revoratio and Gatsby" width="260">
-  <br>
-  revoratio Gatsby Themes
-  <br>
-</h1>
+[Revoratio](static/banner.png)
 
-<h4 align="center">Gatsby themes that we use to build websites at <a href="https://revoratio.com.br?utm_source=github-gatsby-themes" target="_blank">revoratio</a> ⚡️🔥</h4>
+---
 
-<p align="center">
-  <img src="https://img.shields.io/badge/PRs-welcome-%238257E6.svg" alt="PRs welcome!" />
+# Introduction
 
-  <img alt="License" src="https://img.shields.io/badge/license-MIT-%238257E6">
+Revoratio is a Gatsby Theme made for those of you who need to build **brand guidelines**. Whether you're building this for your own brand, or you're a designer who needs to build brand docs all the time, this theme should give you the base framework you need. 
 
-  <a href="https://twitter.com/intent/follow?screen_name=revoratio">
-    <img src="https://img.shields.io/twitter/follow/revoratio.svg?label=Follow%20@revoratio" alt="Follow @revoratio" />
-  </a>
-</p>
+You'll need some familiarity with starting up a gatsby project, a decent grip of editing a few code files (guided in the theme guide) and comfort with Markdown. 
 
-<p align="center">
-  <a href="#themes">Themes</a> •
-  <a href="#contributing">Contributing</a> •
-  <a href="#need-help">Need help?</a> •
-  <a href="#license">License</a>
-</p>
+We'd be happy to know if you have any thoughts or suggestions for additions!
 
-## Themes
+## Features
 
-🚀 [`gatsby-theme-revoratio-core`](./@revoratio/gatsby-theme-revoratio-core): The core theme for docs websites that includes all the data structures you need.
+📝 MDX for docs
 
-🚀 [`gatsby-theme-revoratio`](./@revoratio/gatsby-theme-revoratio): Out of the box Gatsby Theme for creating documentation websites easily and quickly.
+🖱 Table of Contents for each page
 
-## Contributing
+🎨 Dedicated blocks for branding
 
-Thanks for being interested in contributing! We’re so glad you want to help! Please take a little bit of your time and look at our [contributing guidelines](.github/CONTRIBUTING.md) and our
-[code of conduct](.github/CODE_OF_CONDUCT.md)! All type of contributions are welcome, such as bug fixes, issues or feature requests. Also, don't forget to check the roadmap.
+🖥 Code styling and highlighting
 
-## Need help?
+🖋 Font and colours customisation
 
-If you need help, feel free to open an issue with a description of the problem
-you're facing or, if you prefer, you can chat with us on our
-[forum](https://github.com/revoratio/gatsby-themes/discussions).
+🚩 Yaml-based sidebar navigation
 
-## Thanks
+📱 Responsive and mobile friendly
 
-The following Open Source projects heavily inspire this project! Thanks, Apollo and LekoArts!
+🔎 SEOsetup (Sitemap, schema.org data, Open Graph tags).
 
-- [LekoArts Gatsby themes](https://github.com/LekoArts/gatsby-themes)
-- [Apollo Gatsby themes](https://github.com/apollographql/gatsby-theme-apollo)
-
-## License
-
-MIT © [revoratio](https://github.com/revoratio)
