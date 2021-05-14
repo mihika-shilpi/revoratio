@@ -1,4 +1,4 @@
-[Revoratio](static/banner.png)
+[Revoratio](revoratio/gastby-theme-revoratio/static/banner.png)
 
 ---
 
