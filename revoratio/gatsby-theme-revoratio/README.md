@@ -1,4 +1,4 @@
-![Revoratio](static/banner.png)
+![Revoratio](../../readme.png)
 
 ---
 
