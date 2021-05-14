@@ -8,9 +8,23 @@ module.exports = (options) => {
       basePath,
     },
     plugins: [
-      `gatsby-plugin-image`,
       `gatsby-transformer-sharp`,
       `theme-ui`,
+      {
+        resolve: `gatsby-transformer-remark`,
+        options: {
+          plugins: [
+            {
+              resolve: `gatsby-remark-images`,
+              options: {
+                maxWidth: 1200,
+                backgroundColor: `rgba(0,0,0,0)`,
+                disableBgImageOnAlpha: true,
+              },
+            },
+          ],
+        },
+      },
       {
         resolve: `gatsby-plugin-sharp`,
         options: {
@@ -22,7 +36,6 @@ module.exports = (options) => {
           fit: `COVER`,
         },
       },
-      `gatsby-remark-images`,
       {
         resolve: `gatsby-source-filesystem`,
         options: {
@@ -63,6 +76,8 @@ module.exports = (options) => {
                 maxWidth: 1200,
                 withWebp: true,
                 linkImagesToOriginal: false,
+                backgroundColor: `rgba(0,0,0,0)`,
+                disableBgImageOnAlpha: true,
               },
             },
             `gatsby-remark-responsive-iframe`,
