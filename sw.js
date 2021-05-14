@@ -36,26 +36,11 @@ self.__precacheManifest = [
     "url": "bac1b955-4456571ec26905f16636.js"
   },
   {
-    "url": "app-11b267abd391289d65f0.js"
+    "url": "app-fc17a5571f3e5856c59e.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "e3d435f80186cc0a7a7c57bb13094040"
-  },
-  {
-    "url": "static/webfonts/s/playfairdisplay/v22/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKdFvXDXbtM.woff2"
-  },
-  {
-    "url": "static/webfonts/s/playfairdisplay/v22/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKd3vXDXbtM.woff2"
-  },
-  {
-    "url": "static/webfonts/s/montserrat/v15/JTURjIg1_i6t8kCHKm45_cJD3gnD_g.woff2"
-  },
-  {
-    "url": "static/webfonts/s/montserrat/v15/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2"
-  },
-  {
-    "url": "static/webfonts/s/montserrat/v15/JTURjIg1_i6t8kCHKm45_ZpC3gnD_g.woff2"
+    "revision": "32995a17b55e65725efcc6377b8ca8c7"
   },
   {
     "url": "component---cache-caches-gatsby-plugin-offline-app-shell-js-bd66e0875c644eebea41.js"
@@ -66,7 +51,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "35977ee384dc0244adaa525a398d96c7"
+    "revision": "cd0eb629b3855ef39284d64ac387c358"
   },
   {
     "url": "polyfill-e51bbee8c96ca1f53276.js"
@@ -165,7 +150,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/revoratio/app-11b267abd391289d65f0.js`))) {
+  if (!resources || !(await caches.match(`/revoratio/app-fc17a5571f3e5856c59e.js`))) {
     return await fetch(event.request)
   }
 
