@@ -10,6 +10,10 @@ You'll need some familiarity with starting up a gatsby project, a decent grip of
 
 We'd be happy to know if you have any thoughts or suggestions for additions!
 
+## Demo
+
+You can preview the demo and read usage guidelines on this [Gatsby Pages Site](https://mihika-shilpi.github.io/revoratio/)
+
 ## Features
 
 📝 MDX for docs
