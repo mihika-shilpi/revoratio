@@ -2,7 +2,7 @@ module.exports = {
   pathPrefix: "/revoratio",
   siteMetadata: {
     siteTitle: `Revoratio Docs`,
-    defaultTitle: `Reoratio Docs`,
+    defaultTitle: `Revoratio Docs`,
     siteTitleShort: `Revoratio Docs`,
     siteDescription: `Out of the box Gatsby Theme for creating documentation websites easily and quickly`,
     siteImage: `static/banner.png`,
