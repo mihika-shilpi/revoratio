@@ -17,7 +17,7 @@ export default function GlobalStyle() {
 
         body {
           font-size: 16px;
-          font-family: 'Inter', sans-serif;
+          font-family: ${theme.fonts.primary}, sans-serif;
           background-color: ${theme.colors.background};
           text-rendering: optimizelegibility;
           -webkit-font-smoothing: antialiased;

@@ -7,4 +7,7 @@ export default {
     grey: `#828282`,
     soft: '#e0e0e0',
   },
+  fonts: {
+    primary: 'Inter',
+  }
 };

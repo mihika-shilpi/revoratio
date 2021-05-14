@@ -64,7 +64,7 @@ export default {
 
 ## Fonts
 
-We use a handy plugin called `gatsby-plugin-webfonts` which makes it easy for you to import fonts from known web sources into your project for use. Read more about the theme [on its gatsby page](https://www.gatsbyjs.com/plugins/gatsby-plugin-webfonts/).
+We use a handy plugin called `gatsby-plugin-webfonts` which makes it easy for you to import fonts from known web sources into your project for use. Read more about the plugin [on its gatsby page](https://www.gatsbyjs.com/plugins/gatsby-plugin-webfonts/).
 
 Add fonts in you `gatsby-config.js` file.
 
@@ -83,22 +83,12 @@ Add fonts in you `gatsby-config.js` file.
 },
 ```
 
-These fonts can then be used in the Brand Fonts component to display your brand fonts, or you can replace the entire website's font by shadowing the global styles file:
+These fonts can then be used in the Brand Fonts component to display your brand fonts, or you can replace the entire website's font by shadowing the theme styles file:
 
-```js title=src/gatsby-theme-revoratio/styles/global.js
-import React from 'react';
-import { useTheme, Global, css } from '@emotion/react';
-
-export default function GlobalStyle() {
-  const theme = useTheme();
-
-  return (
-    <Global
-      styles={css`
-        body {
-          font-family: 'Inter', sans-serif;
-        }
-      `}
-      />
-  )
+```js title=src/gatsby-theme-revoratio/styles/theme.js
+export default {
+  fonts: {
+    primary: 'fontname', // will apply to theme interface
+  },
+};
 ```
