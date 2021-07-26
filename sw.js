@@ -27,7 +27,7 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-9a3155264afb1ddb2819.js"
+    "url": "webpack-runtime-339eecc4443f33caa9a3.js"
   },
   {
     "url": "framework-1f2d33ac07c263e4d3df.js"
@@ -36,11 +36,26 @@ self.__precacheManifest = [
     "url": "bac1b955-4456571ec26905f16636.js"
   },
   {
-    "url": "app-fc17a5571f3e5856c59e.js"
+    "url": "app-4fa52fa919e9a83092d3.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "32995a17b55e65725efcc6377b8ca8c7"
+    "revision": "462af411cde4a3f2df2f29bb0f7444ca"
+  },
+  {
+    "url": "static/webfonts/s/playfairdisplay/v22/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKdFvXDXbtM.woff2"
+  },
+  {
+    "url": "static/webfonts/s/playfairdisplay/v22/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKd3vXDXbtM.woff2"
+  },
+  {
+    "url": "static/webfonts/s/montserrat/v15/JTURjIg1_i6t8kCHKm45_cJD3gnD_g.woff2"
+  },
+  {
+    "url": "static/webfonts/s/montserrat/v15/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2"
+  },
+  {
+    "url": "static/webfonts/s/montserrat/v15/JTURjIg1_i6t8kCHKm45_ZpC3gnD_g.woff2"
   },
   {
     "url": "component---cache-caches-gatsby-plugin-offline-app-shell-js-bd66e0875c644eebea41.js"
@@ -51,7 +66,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "cd0eb629b3855ef39284d64ac387c358"
+    "revision": "93d4f8e8140b7eacc226f116fc2f85e0"
   },
   {
     "url": "polyfill-e51bbee8c96ca1f53276.js"
@@ -150,7 +165,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/revoratio/app-fc17a5571f3e5856c59e.js`))) {
+  if (!resources || !(await caches.match(`/revoratio/app-4fa52fa919e9a83092d3.js`))) {
     return await fetch(event.request)
   }
 
