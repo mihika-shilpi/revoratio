@@ -4,7 +4,36 @@ description: Revoratio theme setup and configuration.
 featuredImage: ../../../static/Revoratio/cover.png
 ---
 
-Once you've got a gatsby project running with this theme, here are the first few steps to set up
+## Using theme
+
+Since this theme isn't published (yet!) on npm, you can't add it as a theme dependency.
+Instead you can work with it using [workspaces](https://www.gatsbyjs.com/blog/2019-05-22-setting-up-yarn-workspaces-for-theme-development/) which means you can edit the theme itself and the project using it at the same time.
+To do this, first start a new gatsby project by cloing this repository.
+
+```
+npx gatsby new guidelines https://github.com/mihika-shilpi/revoratio
+```
+
+Once the project is cloned, nagivate into the project directory (if you copied the above, that's `guidelines`). First, you want to install Gatsby and some key modules. so run
+
+```
+yarn
+```
+
+This might take a moment. Once it's done, you're ready to start working!
+For the react experience, you're going to want to develop the demo. This is where workspaces come in:
+
+```
+yarn workspace demo develop
+```
+
+From here on out, it's usual gatsby!
+
+<BrandCaption> If you'd like to publish to github pages, the packages are already installed and configured. Read more about publishing <a href="https://www.gatsbyjs.com/docs/how-to/previews-deploys-hosting/how-gatsby-works-with-github-pages"> here</a>. This project is configured for deploying to a path on GitHub Pages.
+</BrandCaption>
+
+
+---
 
 ## Config
 
@@ -71,8 +100,8 @@ My awesome project!
 
 ## Navigation
 
-To create the left hand side page sidebar navigation, create and edit a yaml file. 
-Create a `sidebar.yml` file under the `src/gatsby-theme-revoratio/config` folder. 
+To create the left hand side page sidebar navigation, create and edit a yaml file.
+Create a `sidebar.yml` file under the `src/gatsby-theme-revoratio/config` folder.
 Then add your section titles and guide pages into the structure. You can add external links too.
 
 ```yaml title=sidebar.yml
@@ -92,7 +121,7 @@ Then add your section titles and guide pages into the structure. You can add ext
 
 ## Guidelines
 
-And now, you're ready to start creating your guidelines! 
+And now, you're ready to start creating your guidelines!
 All MDX files created inside your docs folder will become pages, with the path defined by the filename. Inside all docs files, as MDX frontmatteer you can optionally define these items:
 
 
@@ -105,5 +134,5 @@ featuredImage: /banner.jpeg // Optional header image for the page
 disableTableOfContents: false // Turn of the automatic page TOC on the right
 ---
 
-And then all you MDX and components content 
+And then all you MDX and components content
 ```
